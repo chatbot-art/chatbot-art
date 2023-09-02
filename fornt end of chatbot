@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Compatibility Chat(B)ot</title>
+  <style>
+    
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+.header {
+  background-color: #2ecc71;
+  color: white;
+  text-align: center;
+  padding: 2em 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+  font-size: 2rem;
+}
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+
+.input-section, .result-section {
+  background-color: #f9f9f9;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+  margin-top: 1.5em;
+}
+
+.input-container, .result-container {
+  margin-bottom: 1em;
+}
+
+.calculate-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 0.8em 1.5em;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calculate-btn:hover {
+  background-color: #2980b9;
+}
+
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1.5em 0;
+  margin-top: 2em;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
+.result-container {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 1.5em;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.result-title {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+}
+
+.result-content {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1em;
+}
+
+.result-emoticon {
+  font-size: 3rem;
+  margin-bottom: 1em;
+}
+
+.result-emoticon span {
+  display: block;
+}
+
+.result-emoticon .icon {
+  display: inline-block;
+  margin-right: 0.2em;
+}
+
+.result-emoticon .icon-good {
+  color: #2ecc71;
+}
+
+.result-emoticon .icon-neutral {
+  color: #3498db;
+}
+
+.result-emoticon .icon-bad {
+  color: #e74c3c;
+}
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1 class="header-title">Chatbot</h1>
+  </header>
+  <main class="main">
+    <section class="input-section">
+      <h2 class="section-title">Enter Your Information</h2>
+      <div class="input-container">
+        <label for="name1">Person 1 Name:</label>
+        <input type="text" id="name1" placeholder="Enter Name">
+      </div>
+      <div class="input-container">
+        <label for="name2">Person 2 Name:</label>
+        <input type="text" id="name2" placeholder="Enter Name">
+      </div>
+      <button id="calculateBtn" class="calculate-btn">Calculate Compatibility</button>
+    </section>
+    <section class="result-section" id="resultSection">
+      <h2 class="section-title">Compatibility Results</h2>
+      <div class="result-container">
+       
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer-text">&copy; DT Project</p>
+  </footer>
+  <script>
+   
+  </script>
+</body>
+</html>
