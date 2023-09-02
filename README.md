@@ -1,0 +1,37 @@
+pip install gspread oauth2client
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+
+# Replace with the path to your JSON key file
+JSON_KEY_FILE = 'YOUR_JSON_KEY_FILE.json'
+
+# Replace with your Google Sheets URL
+SPREADSHEET_URL = 'YOUR_SPREADSHEET_URL'
+
+# Use your JSON key file to authenticate and access Google Sheets
+scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+creds = ServiceAccountCredentials.from_json_keyfile_name(JSON_KEY_FILE, scope)
+client = gspread.authorize(creds)
+
+# Open the Google Sheet by URL
+sheet = client.open_by_url(SPREADSHEET_URL)
+
+# Access the first worksheet in the Google Sheet
+worksheet = sheet.get_worksheet(0)
+
+def collect_survey_data():
+    # Get all the data from the Google Sheet
+    data = worksheet.get_all_records()
+
+    # Process the data as needed
+    for entry in data:
+        # Perform any specific processing or analysis here
+        print(entry)
+
+if __name__ == '__main__':
+    collect_survey_data()
+
+
+
+
+
